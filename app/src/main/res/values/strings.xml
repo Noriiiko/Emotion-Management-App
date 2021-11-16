@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">emomanager</string>
+    <string name="analyze_repo">情绪分析报告</string>
+    <string name="repo_generate">生成报告</string>
 </resources>
