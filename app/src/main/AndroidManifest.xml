@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Emomanager">
         <activity
+            android:name=".RecordFeelings"
+            android:exported="true"
+            android:label="@string/title_activity_record_feelings"
+            android:theme="@style/Theme.Emomanager.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

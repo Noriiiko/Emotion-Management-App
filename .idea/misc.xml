@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/pharmon/Desktop/AndroidDev/Emotion-Management-App/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/learning_materials/Emotion-Management-App/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/learning_materials/Emotion-Management-App/app/src/main/res/layout/activity_record_feelings.xml" value="0.14666666666666667" />
+        <entry key="..\:/learning_materials/Emotion-Management-App/app/src/main/res/layout/content_record_feelings.xml" value="0.4466666666666667" />
       </map>
     </option>
   </component>
