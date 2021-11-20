@@ -75,28 +75,74 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:orientation="horizontal"
-        >
+        android:orientation="vertical">
 
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="3dp"
             android:layout_weight="20"
             android:paddingLeft="30dp"
-            android:text="😊"
+            android:text="😊 with day"
+            android:textColor="#EF6C00"
             android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="20"
+            android:paddingLeft="30dp"
+            android:text="😒 with day"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="20"
+            android:paddingLeft="30dp"
+            android:text="😡 with day"
+            android:textColor="#E91E63"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="(Sample alalysis text)" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@mipmap/linegraph_demo"
+        android:orientation="horizontal">
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@mipmap/linegraph_demo">
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Mood Calendar" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Mood Analysis" />
     </LinearLayout>
 
 
