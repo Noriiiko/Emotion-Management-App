@@ -11,5 +11,7 @@ public class AnalyzeRepo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analyze_repo);
 
+        DbHelper helper = new DbHelper(this);
+        helper.getWritableDatabase();
     }
 }

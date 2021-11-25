@@ -22,7 +22,8 @@
             android:gravity="center"
             android:text="@string/repo_title"
             android:textColor="#3E3E3E"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+         />
 
         <Button
             android:id="@+id/repo_generate"
@@ -31,7 +32,7 @@
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:text="@string/repo_generation"
-            android:textColor="#757575" />
+            android:textColor="#000000" />
 
 
     </LinearLayout>
@@ -55,7 +56,7 @@
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/record_amount"
+            android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -64,7 +65,7 @@
             android:textSize="45sp" />
 
         <TextView
-            android:id="@+id/record_day"
+            android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -80,32 +81,30 @@
 
 
         <TextView
-            android:id="@+id/happy_record"
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_weight="20"
             android:paddingLeft="30dp"
-            android:paddingRight="15dp"
             android:text="😊 with day"
             android:textColor="#FF5722"
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/ok_record"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_weight="20"
             android:paddingLeft="30dp"
-            android:paddingRight="15dp"
             android:text="😒 with day"
             android:textSize="30sp" />
 
         <TextView
+            android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_weight="20"
             android:paddingLeft="30dp"
-            android:paddingRight="15dp"
             android:text="😡 with day"
             android:textColor="#E91E63"
             android:textSize="30sp" />
@@ -115,6 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="20"
+            android:background="@drawable/shape_rectangle"
             android:gravity="left|center_vertical"
             android:text="@string/sample_alalysis_text"
             android:textSize="20sp" />
@@ -143,18 +143,20 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/mood_calendar" />
+            android:text="@string/mood_calendar"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/mood_analysis" />
+            android:text="@string/mood_analysis"
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
 
 
