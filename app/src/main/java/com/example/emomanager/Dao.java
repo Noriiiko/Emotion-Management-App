@@ -3,10 +3,12 @@ package com.example.emomanager;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 
 public class Dao {
 
+    private static final String TAG = "Dao";
     private final DbHelper mHelper;
 
     public Dao(Context context){
@@ -47,15 +49,19 @@ public class Dao {
     }
     public void query(){
 
-//        SQLiteDatabase db = mHelper.getWritableDatabase();
-//
-//        String sql = "select * from " + Constants.TABLE_NAME_1 ;
-//        Cursor cursor = db.rawQuery(sql, null);
-//
-//        while(cursor.moveToNext()){
-//
-//        }
-//        db.close();
+        SQLiteDatabase db = mHelper.getWritableDatabase();
+
+        String sql = "select * from " + Constants.TABLE_NAME_1 ;
+        Cursor cursor = db.rawQuery(sql, null);
+
+        while(cursor.moveToNext()){
+            int index = cursor.getColumnIndex("date");
+
+            String date = cursor.getString(index);
+            Log.d(TAG, "date == " + date);
+
+        }
+        db.close();
 
 
     }
