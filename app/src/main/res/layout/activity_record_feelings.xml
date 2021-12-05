@@ -6,550 +6,272 @@
     android:layout_height="match_parent"
     tools:context=".RecordFeelings">
 
+    <LinearLayout
+        android:id="@+id/linearLayout_recordFeelings"
+        android:layout_width="559dp"
+        android:layout_height="337dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/record_feelings_container_shape"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="901dp"
-        android:layout_height="90dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/holo_blue_light"
-        android:theme="@style/Theme.Emomanager.AppBarOverlay"
-        app:layout_constraintBottom_toTopOf="@+id/NoRecordsText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="708dp"
-            android:layout_height="111dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="109dp"
-            android:text="Record Feelings"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/black"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:id="@+id/title_recordFeelings"
+            android:layout_width="587dp"
+            android:layout_height="117dp"
+            android:gravity="center"
+            android:text="@string/title_recordFeelings"
+            android:textColor="@color/blue"
+            android:textSize="35sp" />
 
-    <TextView
-        android:id="@+id/NoRecordsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="175dp"
-        android:text="No records yet, record today's mood right now!"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:barrierMargin="@dimen/fab_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
 
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12" />
+        <LinearLayout
+            android:id="@+id/linearLayout_chooseFeelings"
+            android:layout_width="547dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-    <View
-        android:id="@+id/divider4"
-        android:layout_width="898dp"
-        android:layout_height="5dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="38dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <ImageButton
+                android:id="@+id/btn_happy"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_feelings"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/happy"
+                tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="cook"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button20"
-        app:layout_constraintTop_toBottomOf="@+id/button17" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="34dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="happy"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            <ImageButton
+                android:id="@+id/btn_peace"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_feelings"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/peace"
+                tools:ignore="ImageContrastCheck" />
 
-    <Button
-        android:id="@+id/button20"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:text="eat and drink"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button13" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="pleasant"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintStart_toEndOf="@+id/button1" />
+            <ImageButton
+                android:id="@+id/btn_sad"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_feelings"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/sad"
+                tools:ignore="ImageContrastCheck" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="30dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="satisfied"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button27"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="game"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button25"
-        app:layout_constraintTop_toBottomOf="@+id/button22" />
+            <ImageButton
+                android:id="@+id/btn_cry"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_feelings"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/crying"
+                tools:ignore="ImageContrastCheck" />
 
-    <TextView
-        android:id="@+id/reasons"
-        android:layout_width="353dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="531dp"
-        android:layout_marginBottom="18dp"
-        android:text="What're the reasons?"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider5" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button22"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="shopping"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button21"
-        app:layout_constraintTop_toBottomOf="@+id/button18" />
+            <ImageButton
+                android:id="@+id/btn_angry"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_feelings"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/angry"
+                tools:ignore="ImageContrastCheck" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="34dp"
-        android:backgroundTint="@color/purple_200"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:text="surprised"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="468dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="34dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="excited"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+            <ImageButton
+                android:id="@+id/btn_ill"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/btn_feelings"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ill"
+                tools:ignore="ImageContrastCheck" />
 
-    <Button
-        android:id="@+id/button24"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="quarrel"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button20" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="sports"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button18"
-        app:layout_constraintTop_toBottomOf="@+id/divider5" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button29"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="11dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="dating"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button28"
-        app:layout_constraintTop_toBottomOf="@+id/button25" />
+            <TextView
+                android:id="@+id/text_happy"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/text_happy"
+                android:textColor="@color/blue"
+                android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button31"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="11dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="movie"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button30"
-        app:layout_constraintTop_toBottomOf="@+id/button26" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="38dp"
-        android:text="What's your feeling today?"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+            <TextView
+                android:id="@+id/ext_peace"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_peace"
+                android:textColor="@color/blue"
+                android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button23"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:text="accompany"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button22"
-        app:layout_constraintTop_toBottomOf="@+id/button19" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="33dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="lonely"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/divider5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+            <TextView
+                android:id="@+id/text_sad"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_sad"
+                android:textColor="@color/blue"
+                android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="18dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="study"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reasons" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="33dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="angry"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/divider5"
-        app:layout_constraintStart_toEndOf="@+id/button11" />
+            <TextView
+                android:id="@+id/text_crying"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_crying"
+                android:textColor="@color/blue"
+                android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button28"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="11dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="fight "
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="30dp"
-        android:backgroundTint="@color/purple_200"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:text="Disappointed"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+            <TextView
+                android:id="@+id/text_angry"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_angry"
+                android:textColor="@color/blue"
+                android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="travel"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button17"
-        app:layout_constraintTop_toBottomOf="@+id/divider5" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/button32"
-        android:layout_width="200dp"
-        android:layout_height="95dp"
-        android:layout_marginStart="330dp"
-        android:layout_marginBottom="30dp"
-        android:text="Add Record"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/text_sick"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_sick"
+                android:textColor="@color/blue"
+                android:textSize="15sp" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button25"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="sleep"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button24"
-        app:layout_constraintTop_toBottomOf="@+id/button21" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="Calm"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        <Button
+            android:id="@+id/btn_addFeelings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="48dp"
+            android:text="@string/btn_addFeelings"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="30dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="bored"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/daily"
-        android:layout_width="778dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="12dp"
-        android:text="Daily"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/divider4"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="33dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="sad"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/divider5"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
-
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="work"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button21"
-        app:layout_constraintEnd_toStartOf="@+id/button18"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toBottomOf="@+id/reasons" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="Scared"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
-
-    <Button
-        android:id="@+id/button30"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="11dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="nothing"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button29"
-        app:layout_constraintTop_toBottomOf="@+id/button27" />
-
-    <Button
-        android:id="@+id/button26"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="reading"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/button27"
-        app:layout_constraintTop_toBottomOf="@+id/button23" />
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="898dp"
-        android:layout_height="5dp"
+    <LinearLayout
+        android:layout_width="556dp"
+        android:layout_height="427dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
-        android:background="?android:attr/listDivider"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/record_feelings_container_shape"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_recordFeelings"
+        app:layout_constraintVertical_bias="0.103">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:id="@+id/text_titleOfDiary"
+            android:layout_width="464dp"
+            android:layout_height="331dp"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:text="@string/text_Diary"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_addDiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/btn_addDiary"
+            android:textAllCaps="false" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

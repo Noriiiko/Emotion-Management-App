@@ -1,18 +1,17 @@
 package com.example.emomanager;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 
 public class Dao {
 
-    private final DbHelper mHelper;
+    private final FeelingsDB mHelper;
 
     public Dao(Context context){
 
         //Create Database
-        mHelper = new DbHelper(context);
+        mHelper = new FeelingsDB(context);
     }
 
     public void insertDailyMood(String date, String weekday, String mood){

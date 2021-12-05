@@ -1,4 +1,7 @@
 <resources>
+    <!--analysis-->
+    <string name="first_fragment_label">calendar</string>
+    <string name="second_fragment_label">analysis</string>
     <string name="app_name">emomanager</string>
     <string name="repo_title">Sentiment report</string>
     <string name="repo_generation">download</string>
@@ -9,5 +12,18 @@
     <string name="todo">TODO</string>
     <string name="mood_analysis">Mood Analysis</string>
     <string name="sample_alalysis_text">(Sample alalysis text)</string>
-
+<!--diary, record feelings-->
+    <string name="btn_addFeelings">Add Feelings</string>
+    <string name="btn_record">Record</string>
+    <string name="title_recordFeelings">Add Feelings</string>
+    <string name="title_record">How are you feeling today?</string>
+    <string name="textview1">Diary</string>
+    <string name="text_Diary">Click "Keep A Diary" to start</string>
+    <string name="btn_addDiary">Keep A Diary</string>
+    <string name="text_happy">Happy</string>
+    <string name="text_peace">Peace</string>
+    <string name="text_sad">Sad</string>
+    <string name="text_crying">Crying</string>
+    <string name="text_angry">Angry</string>
+    <string name="text_sick">Sick</string>
 </resources>
